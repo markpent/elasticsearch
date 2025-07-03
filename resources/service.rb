@@ -55,6 +55,7 @@ action :configure do
         ExecStart: "#{es_conf.path_home}/bin/systemd-entrypoint -p ${PID_DIR}/elasticsearch.pid --quiet",
         StandardOutput: 'journal',
         StandardError: 'inherit',
+        LimitMEMLOCK: 'infinity',
         LimitNOFILE: '65535',
         LimitNPROC: '4096',
         LimitAS: 'infinity',
