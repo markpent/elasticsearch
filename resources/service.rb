@@ -40,6 +40,7 @@ action :configure do
       },
       Service: {
         Type: 'notify',
+        NotifyAccess: 'All',
         RuntimeDirectory: 'elasticsearch',
         PrivateTmp: 'true',
         Environment: [
